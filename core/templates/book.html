@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block title %}Book Free Trial — {{ site.name }}{% endblock %}{% block content %}
+<div class="container py-5"><div class="row justify-content-center"><div class="col-lg-7"><div class="d-flex flex-column text-center mb-4"><h4 class="text-primary font-weight-bold">Free Trial</h4><h4 class="display-4 font-weight-bold">Book Your Free Session</h4></div>
+<form method="post" novalidate>{% csrf_token %}{{ form.non_field_errors }}
+<div style="position:absolute;left:-9999px" aria-hidden="true">{{ form.website }}</div>
+{% for f in form.visible_fields %}<div class="form-group"><label for="{{ f.id_for_label }}" class="font-weight-bold">{{ f.label }}</label>{{ f }}{% for e in f.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}</div>{% endfor %}
+<button class="btn btn-lg btn-primary btn-block" type="submit">Reserve My Free Trial</button></form></div></div></div>{% endblock %}

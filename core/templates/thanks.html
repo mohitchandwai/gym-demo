@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}<div class="container py-5 text-center"><h1 class="display-4 font-weight-bold text-primary">You're booked, {{ booking.name }}!</h1>
+<p class="lead">We have your request for {{ booking.preferred_date|date:"d M Y" }}. Our team will contact you on {{ booking.phone }} to confirm the slot.</p>
+{% if wa_link %}<a href="{{ wa_link }}" target="_blank" rel="noopener" class="btn btn-lg btn-primary px-5 mt-3">Confirm on WhatsApp</a>{% endif %}
+<div class="mt-4"><a href="{% url 'home' %}">Back to home</a></div></div>{% endblock %}

@@ -1,0 +1,243 @@
+{% extends "base.html" %}{% load static %}{% block content %}
+
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0">{{ site.name }}</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">{{ site.tagline }}</h2>
+                        <a href="{% url 'book' %}" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Book Free Trial</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0">{{ site.name }}</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Get Body In Shape</h2>
+                        <a href="{% url 'book' %}" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Book Free Trial</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    
+
+    <div class="container gym-class mb-5">
+        <div class="row px-3">
+            <div class="col-md-6 p-0">
+                <div class="gym-class-box d-flex flex-column align-items-end justify-content-center bg-primary text-right text-white py-5 px-5">
+                    <i class="flaticon-six-pack"></i>
+                    <h3 class="display-4 mb-3 text-white font-weight-bold">Body Building</h3>
+                    <p>Structured programs that track your progress week by week.</p>
+                    <a href="{% url 'book' %}" class="btn btn-lg btn-outline-light mt-4 px-4">Book Free Trial</a>
+                </div>
+            </div>
+            <div class="col-md-6 p-0">
+                <div class="gym-class-box d-flex flex-column align-items-start justify-content-center bg-secondary text-left text-white py-5 px-5">
+                    <i class="flaticon-bodybuilding"></i>
+                    <h3 class="display-4 mb-3 text-white font-weight-bold">Muscle Building</h3>
+                    <p>Friendly trainers who guide you through every session.</p>
+                    <a href="{% url 'book' %}" class="btn btn-lg btn-outline-light mt-4 px-4">Book Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid mb-4 mb-lg-0" src="{% static 'img/about.jpg' %}" alt="Image">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-4 font-weight-bold mb-4">{{ site.about_title }}</h2>
+                <p>{{ site.about_text|linebreaksbr }}</p>
+                <div class="row py-2">
+                    <div class="col-sm-6">
+                        <i class="flaticon-barbell display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">Modern Equipment</h4>
+                        <p>Clean, well-maintained equipment for strength and cardio.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="flaticon-medal display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">Expert Guidance</h4>
+                        <p>A supportive community that keeps you motivated.</p>
+                    </div>
+                </div>
+                <a href="{% url 'book' %}" class="btn btn-lg px-4 btn-outline-primary">Book Free Trial</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-training display-3 text-primary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Progression</h2>
+                        <p>Flexible timings so training fits around your day.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-primary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-weightlifting display-3 text-secondary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Workout</h2>
+                        <p>Programs for beginners and experienced lifters alike.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="flaticon-treadmill display-3 text-primary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Nutrition</h2>
+                        <p>Structured programs that track your progress week by week.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container feature pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Why Choose Us?</h4>
+            <h4 class="display-4 font-weight-bold">Benefits of Joining Our GYM</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/feature-1.jpg' %}" alt="Image">
+                        <i class="flaticon-barbell"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Videos Instruction</h4>
+                        <p>Friendly trainers who guide you through every session.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/feature-2.jpg' %}" alt="Image">
+                        <i class="flaticon-training"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Training Calendar</h4>
+                        <p>Clean, well-maintained equipment for strength and cardio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/feature-3.jpg' %}" alt="Image">
+                        <i class="flaticon-trends"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Free Apps & WiFi</h4>
+                        <p>A supportive community that keeps you motivated.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/feature-4.jpg' %}" alt="Image">
+                        <i class="flaticon-support"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Community Support</h4>
+                        <p>Flexible timings so training fits around your day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div id="plans" class="container py-5"><div class="d-flex flex-column text-center mb-5"><h4 class="text-primary font-weight-bold">Membership</h4><h4 class="display-4 font-weight-bold">Choose Your Plan</h4></div>
+<div class="row justify-content-center">{% for p in plans %}<div class="col-lg-4 col-md-6 mb-4"><div class="card bg-secondary text-center text-white h-100 {% if p.is_popular %}border-primary{% else %}border-0{% endif %}" {% if p.is_popular %}style="border-width:2px"{% endif %}>
+{% if p.is_popular %}<div class="bg-primary text-white py-1 font-weight-bold">MOST POPULAR</div>{% endif %}
+<div class="card-body py-5"><h3 class="text-primary">{{ p.name }}</h3><h1 class="display-4 font-weight-bold text-white">&#8377;{{ p.price }}<small class="h5"> /month</small></h1>
+<ul class="list-unstyled my-4">{% for f in p.feature_list %}<li class="mb-2"><i class="fa fa-check text-primary mr-2"></i>{{ f }}</li>{% endfor %}</ul>
+<a href="{% url 'book' %}?plan={{ p.pk }}" class="btn btn-lg btn-outline-light px-4">Try Free</a></div></div></div>{% endfor %}</div></div>
+<div id="classes" class="container gym-feature py-5"><div class="d-flex flex-column text-center mb-5"><h4 class="text-primary font-weight-bold">Class Timetable</h4><h4 class="display-4 font-weight-bold">Working Hours and Class Time</h4></div>
+{% if tabs %}<div class="tab-class"><ul class="nav nav-pills justify-content-center mb-4">{% for key,label,rows in tabs %}<li class="nav-item"><a class="nav-link {% if forloop.first %}active{% endif %}" data-toggle="pill" href="#class-{{ key }}">{{ label }}</a></li>{% endfor %}</ul>
+<div class="tab-content">{% for key,label,rows in tabs %}<div id="class-{{ key }}" class="container tab-pane p-0 {% if forloop.first %}active{% else %}fade{% endif %}">{% include "partials/sessions.html" with rows=rows %}</div>{% endfor %}</div></div>
+{% else %}<p class="text-center">Timetable coming soon.</p>{% endif %}</div>
+
+    <div class="container-fluid position-relative bmi my-5">
+        <div class="container">
+            <div class="row px-3 align-items-center">
+                <div class="col-md-6">
+                    <div class="pr-md-3 d-none d-md-block">
+                        <h4 class="text-primary">Body Mass Index </h4>
+                        <h4 class="display-4 text-white font-weight-bold mb-4">What is BMI?</h4>
+                        <p class="m-0 text-white">BMI (Body Mass Index) compares your weight to your height. It is a quick screening number, not a diagnosis, so talk to a trainer about your goals.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-secondary py-5">
+                    <div class="py-5 px-3">
+                        <h1 class="mb-4 text-white">Calculate your BMI</h1>
+                        <form>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input type="text" class="form-control form-control-lg bg-dark text-white" id="bmi-w" placeholder="Weight (KG)">
+                                </div>
+                                <div class="col form-group">
+                                    <input type="text" class="form-control form-control-lg bg-dark text-white" id="bmi-h" placeholder="Height (CM)">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Age">
+                                </div>
+                                <div class="col form-group">
+                                    <select class="custom-select custom-select-lg bg-dark text-muted">
+                                        <option>Gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="bmi-btn" type="button" class="btn btn-lg btn-block btn-dark border-light"
+                                        value="Calculate Now">
+                                </div>
+                            </div>
+                        <p id="bmi-result" class="text-white mt-3 mb-0"></p></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% if trainers %}<div id="trainers" class="container pt-5 team"><div class="d-flex flex-column text-center mb-5"><h4 class="text-primary font-weight-bold">Our Trainers</h4><h4 class="display-4 font-weight-bold">Meet Our Expert Trainers</h4></div>
+<div class="row">{% for t in trainers %}<div class="col-lg-3 col-md-6 mb-5"><div class="card border-0 bg-secondary text-center text-white"><img class="card-img-top" src="{{ t.photo_url }}" alt="{{ t.name }}">
+<div class="card-body bg-secondary"><h4 class="card-title text-primary">{{ t.name }}</h4><p class="card-text">{{ t.role }}</p></div></div></div>{% endfor %}</div></div>{% endif %}
+{% if testimonials %}<div class="container-fluid position-relative testimonial my-5"><div class="container"><div class="row px-3 align-items-center"><div class="col-md-6 bg-secondary"><div class="d-flex align-items-center px-3" style="min-height:450px;">
+<div id="carouselId" class="carousel slide" data-ride="carousel"><div class="carousel-inner" role="listbox">{% for t in testimonials %}<div class="carousel-item {% if forloop.first %}active{% endif %}">
+<div class="d-flex align-items-center mb-4 text-white"><img width="80" height="80" class="rounded-circle bg-dark p-2" src="{{ t.photo_url }}" alt="{{ t.name }}"><div class="pl-4"><h4 class="text-primary">{{ t.name }}</h4><p class="m-0">{{ t.profession }}</p></div></div>
+<div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">{{ t.text }}</div></div>{% endfor %}</div></div></div></div>
+<div class="col-md-6"><div class="pl-md-5 d-none d-md-block"><h4 class="text-primary">Testimonial</h4><h4 class="display-4 text-white font-weight-bold mb-4">What Our Members Say</h4></div></div></div></div></div>{% endif %}
+<div class="container-fluid bg-secondary py-5 text-center text-white my-5"><h2 class="display-4 font-weight-bold">Ready to start?</h2><p class="mb-4">Book a free trial session. No payment needed.</p><a href="{% url 'book' %}" class="btn btn-lg btn-primary px-5">Book Free Trial</a></div>
+{% endblock %}
+{% block scripts %}<script>
+document.getElementById("bmi-btn").addEventListener("click",function(){var w=parseFloat(document.getElementById("bmi-w").value),h=parseFloat(document.getElementById("bmi-h").value)/100,r=document.getElementById("bmi-result");
+if(!(w>20&&w<300&&h>1&&h<2.5)){r.textContent="Please enter a valid weight (kg) and height (cm).";return}
+var b=w/(h*h),c=b<18.5?"Underweight":b<25?"Healthy range":b<30?"Overweight":"Obese";r.textContent="Your BMI is "+b.toFixed(1)+" ("+c+").";});
+</script>{% endblock %}
